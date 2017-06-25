@@ -1,10 +1,14 @@
-body{
-	background: #F3F4F5;
-}
+body{ background: #F3F4F5; }
 
 h4{
 	font-size: 20px;
 	margin-top: -10px;
+}
+
+h5{
+	color: #766F6E;
+	padding: 2% 5% 2% 5%;
+	font-size: 18px;
 }
 
 footer{
@@ -12,28 +16,26 @@ footer{
 	padding: 20px;
 }
 
+p{
+	color: #7D7675;
+}
+
 /****** Estilos generales ******/
-.inline-block{
-	display: inline-block;
-}
+.inline-block{ display: inline-block; }
 
-.padding-left-0{
-	padding-left: 0 !important;
-}
+.padding-left-0{ padding-left: 0 !important; }
 
-.padding-right-0{
-	padding-right: 0 !important;
-}
+.padding-left-5{ padding-left: 5%; }
 
-.m-bottom{
-	margin-bottom: 5%;
-}
+.padding-right-0{ padding-right: 0 !important; }
 
-.m-top-15{
-	margin-top: 15px;
-}
+.m-bottom{ margin-bottom: 5%; }
+
+.m-top-15{ margin-top: 15px; }
 
 .text-center{ text-align: center; }
+
+.height-60{ height: 60px; }
 /********************************/
 
 /****** Estilos sobreescritos de bootstrap ******/
@@ -107,7 +109,7 @@ footer{
 }
 
 .div-character{
-	height: 300px;
+	height: 340px;
 	background: #FEFFFF;
 	padding: 0 !important;
 	margin-bottom: 30px;
@@ -131,6 +133,10 @@ footer{
 	padding-left: 40px;
 	vertical-align: middle;
 	color: #FFFFFF;
+}
+
+.span-comic{
+	color: #7D7675;
 }
 
 /* Paste this css to your style sheet file or under head tag */
