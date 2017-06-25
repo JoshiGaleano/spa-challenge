@@ -1,0 +1,150 @@
+body{
+	background: #F3F4F5;
+}
+
+h4{
+	font-size: 20px;
+	margin-top: -10px;
+}
+
+footer{
+	background: #2C2828;
+	padding: 20px;
+}
+
+/****** Estilos generales ******/
+.inline-block{
+	display: inline-block;
+}
+
+.padding-left-0{
+	padding-left: 0 !important;
+}
+
+.padding-right-0{
+	padding-right: 0 !important;
+}
+
+.m-bottom{
+	margin-bottom: 5%;
+}
+
+.m-top-15{
+	margin-top: 15px;
+}
+
+.text-center{ text-align: center; }
+/********************************/
+
+/****** Estilos sobreescritos de bootstrap ******/
+.navbar{ border-radius: 0px; }
+
+.navbar-default {
+    background-color: #2C2828;
+    border-color: #2C2828;
+}
+
+.navbar-brand{ padding: 10px 15px 10px 15px; }
+
+.navbar-brand > img {
+	width: 150px;
+	height: 60px;
+}
+
+.navbar-form { padding: 8px 0 8px 150px; }
+
+.container-fluid{
+	height: 80px;
+	padding-left: 30px;
+}
+
+.pagination > li > a {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.btn-danger{
+	background: #E8222D;
+	border-radius: 0;
+	position: absolute;
+	bottom: 0;
+}
+/*************************************************/
+
+#search-character{
+	width: 600px;
+	height: 50px;
+}
+
+.div-info{ height: 160px; }
+
+/* enable absolute positioning */
+.inner-addon { position: relative; }
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.glyphicon-search { font-size: 25px; }
+
+.img-character{
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	margin-top: -20px;
+    margin-left: -20px;
+}
+
+.div-character{
+	height: 300px;
+	background: #FEFFFF;
+	padding: 0 !important;
+	margin-bottom: 30px;
+}
+
+#characters{padding: 0 !important;}
+
+.select-order{
+	width: 60%;
+	float: right;
+	margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.img-footer{
+	float: right;
+	padding-right: 40px;
+}
+
+.span-footer{
+	padding-left: 40px;
+	vertical-align: middle;
+	color: #FFFFFF;
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/gifs/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
+

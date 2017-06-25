@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Spa Challenge</title>
+
+		<link rel="stylesheet" type='text/css' href='../dist/css/bootstrap.min.css'>
+		<link rel="stylesheet" type='text/css' href='../dist/css/jquery-ui.min.css'>
+		<link rel="stylesheet" type='text/css' href='../dist/css/style.css'>
+	</head>
+	<body>
+		<div class="se-pre-con"></div>
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			    <div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+			      	<a class="navbar-brand" href="#">
+			      		<img alt="Marvel" src="../dist/img/logo2.png">
+			      	</a>
+			    </div>
+
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<form class="navbar-form navbar-left">
+				        <div class="form-group inner-addon right-addon">
+				        	<i class="glyphicon glyphicon-search"></i>
+				          	<input type="text" class="form-control" placeholder="Search character..." id="search-character">
+				        </div>
+			      	</form>
+			    </div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<section class="row">
+				<div class="row m-bottom">
+					<div class="col-md-9 padding-left-0">
+						<div class="col-md-6 padding-left-0">
+							<img src="../dist/img/icons/characters.png">
+							<h3 class="inline-block">Characters</h3>
+						</div>
+						<div class="col-md-6 padding-right-0">
+							<select class="form-control select-order">
+								<option>Sort by</option>
+								<option>2</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="padding-left-0">
+							<img src="../dist/img/icons/favourites.png">
+							<h3 class="inline-block">My Favourites</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="characters" class="col-md-9"></div>
+					<div class="col-md-3"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-9">
+						<nav aria-label="Page navigation" class="text-center">
+							<ul class="pagination pagination-lg"></ul>
+						</nav>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 m-top-15">
+						<span class="span-footer">Grability 2016 - Todos los derechos reservados</span>
+					</div>
+					<div class="col-md-6">
+						<img src="../dist/img/grability-logo.png" class="img-footer">
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../dist/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../dist/js/jquery.twbsPagination.min.js"></script>
+		<script type="text/javascript" src="../dist/js/marvel.js"></script>
+	</body>
+</html>
