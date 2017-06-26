@@ -117,6 +117,78 @@ var _marvel = (function(){
             
         });
         /************************************************/
+
+        /* Modal para ver el detallado de los personajes */
+        $('#modalCharacter').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget);
+			var id = button.data('id');
+			var tipo = button.data('tipo');
+
+			var modal = $(this);
+			modal.find('.text-character').text('');
+
+			if(tipo === "character"){
+				ajax(
+			        'characters/' + id,
+			        'GET',
+			        {   
+			            ts : ts,
+			            apikey : apikey,
+			            hash : hash
+			        },
+			        function( response ){
+			            if(response.status=="Ok"){
+			            	var data = response.data.results[0];
+			            	console.log(response);
+			            	var imgCharacter = '"'+ data.thumbnail.path + '.' + data.thumbnail.extension +'"';
+			            	$('.div-img').css('background-image', 'url(' + imgCharacter + ')');
+			            	modal.find('.title-character').text(data.name);
+			            	modal.find('.text-character').append(data.description);
+			            	for (var i = 0; i < data.urls.length; i++) {
+			            		if(data.urls[i].type == "detail"){
+			            			$('.detail-character').attr("href", data.urls[i].url);
+			            			break;
+			            		}
+			            	}
+
+			            	modal.find('.detail-character').show();
+			            	modal.find('#footer-comic').hide();
+			            	modal.find('#footer-character').show();
+			            }
+			        },function(){
+			              alert('Ha ocurrido un error, verifica tu conexión e intenta nuevamente.');
+			        }
+			    );
+			}
+			else{
+				ajax(
+			        'comics/' + id,
+			        'GET',
+			        {   
+			            ts : ts,
+			            apikey : apikey,
+			            hash : hash
+			        },
+			        function( response ){
+			            if(response.status=="Ok"){
+			            	var data = response.data.results[0];
+			            	console.log(response);
+			            	var imgCharacter = '"'+ data.thumbnail.path + '.' + data.thumbnail.extension +'"';
+			            	$('.div-img').css('background-image', 'url(' + imgCharacter + ')');
+			            	modal.find('.title-character').text(data.title);
+			            	modal.find('.text-character').append(data.description);
+
+			            	modal.find('.detail-character').hide();
+			            	modal.find('#footer-character').hide();
+			            	modal.find('#footer-comic').show();
+			            }
+			        },function(){
+			              alert('Ha ocurrido un error, verifica tu conexión e intenta nuevamente.');
+			        }
+			    );
+			}
+		})
+		/************************************************/
 	}
 
 	/* Funcion ajax general */
@@ -234,7 +306,7 @@ var _marvel = (function(){
 								'<div class="col-md-6 div-info">' +
 									'<h4>' + data.name + '</h4>' +
 									'<p>' + data.description.substr(0, 75) + '</p>' +
-									'<button type="button" class="btn btn-danger">VIEW MORE</button>' +
+									'<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalCharacter" data-id="'+ data.id +'" data-tipo="character">VIEW MORE</button>' +
 								'</div>' +
 								'<div class="col-md-12">';
 									if(data.comics.items.length > 0){ 
@@ -277,7 +349,7 @@ var _marvel = (function(){
 										data.description = "";
 									}
 									content += '<p>' + data.description.substr(0, 75) + '</p>' +
-									'<button type="button" class="btn btn-danger">VIEW MORE</button>' +
+									'<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalCharacter" data-id="'+ data.id +'" data-tipo="comic">VIEW MORE</button>' +
 								'</div>' +
 								'<div class="col-md-12">';
 									if(data.characters.items.length > 0){ 

@@ -1,8 +1,19 @@
-body{ background: #F3F4F5; }
+body{ 
+	background: #F3F4F5;
+	line-height: 0; 
+}
+
+h3{
+	color: #3A3332;
+	margin-top: 5px !important;
+	font-weight: bold;
+}
 
 h4{
 	font-size: 20px;
 	margin-top: -10px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 h5{
@@ -18,6 +29,8 @@ footer{
 
 p{
 	color: #7D7675;
+	line-height: 1.42857143;
+	font-size: 15px;
 }
 
 /****** Estilos generales ******/
@@ -29,13 +42,23 @@ p{
 
 .padding-right-0{ padding-right: 0 !important; }
 
+.padding-right-5{ padding-right: 5px; }
+
+.padding-right-15{ padding-right: 15px; }
+
 .m-bottom{ margin-bottom: 5%; }
 
-.m-top-15{ margin-top: 15px; }
+.m-bottom-40{ margin-bottom: 40px; }
 
-.text-center{ text-align: center; }
+.m-top-20{ margin-top: -20px; }
+
+.m-top-25{ margin-top: 25px; }
+
+.text-center{ text-align: center !important; }
 
 .height-60{ height: 60px; }
+
+.color-text{ color: #3A3332 !important; }
 /********************************/
 
 /****** Estilos sobreescritos de bootstrap ******/
@@ -60,6 +83,8 @@ p{
 	padding-left: 30px;
 }
 
+.pagination{ margin: 10px 0 40px 0; }
+
 .pagination > li > a {
 	margin-right: 5px;
 	margin-left: 5px;
@@ -71,11 +96,56 @@ p{
 	position: absolute;
 	bottom: 0;
 }
+
+.modal-body { max-height: 800px; }
+
+.close { opacity: 1; }
+
+.modal-header { 
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+.modal-footer { 
+	border-top: 0;
+	text-align: center;
+	padding: 15px 0 0 0;
+	display: inline-table;
+    width: 100%; 
+}
+
+.btn-info {
+    width: 50%;
+    border-radius: 0;
+    height: 70px;
+    font-size: 17px;
+}
+
+.modal-footer .btn+.btn { margin-left: 0; }
+
+.modal-content{ border-radius: 0; }
+
+.ui-menu .ui-menu-item { line-height: 1.42857143; }
 /*************************************************/
 
 #search-character{
 	width: 600px;
 	height: 50px;
+	line-height: 1.42857143;
+}
+
+.btn-favourites { 
+	background-color: #EFF0F1; 
+	color: #3B3433;
+	border-color: #EFF0F1;
+	font-weight: bold;
+}
+
+.btn-buy{
+	background-color: #DBDCDD;
+	color: #E8222F; 
+	border-color: #DBDCDD;
+	font-weight: bold;
 }
 
 .div-info{ height: 160px; }
@@ -120,7 +190,7 @@ p{
 .select-order{
 	width: 60%;
 	float: right;
-	margin-top: 20px;
+	margin-top: 5px;
     margin-bottom: 10px;
 }
 
@@ -137,6 +207,8 @@ p{
 
 .span-comic{
 	color: #7D7675;
+	line-height: 1.42857143;
+	font-size: 15px;
 }
 
 /* Paste this css to your style sheet file or under head tag */
@@ -152,5 +224,44 @@ if it's not present, don't show loader */
 	height: 100%;
 	z-index: 9999;
 	background: url(../img/gifs/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
+
+.div-img{
+	width: 100%;
+	height: 350px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('http://i.annihil.us/u/prod/marvel/i/mg/c/60/4bc5a1e84f7d3.jpg');
+}
+
+.text-character{
+	font-size: 17px;
+	line-height: 1.42857143;
+	color: #47403F;
+}
+
+#footer-character{
+	text-align: right !important;
+	padding: 15px !important;
+}
+
+.div-favoritos{
+	width: 90%;
+	height: 320px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('http://i.annihil.us/u/prod/marvel/i/mg/c/60/4bc5a1e84f7d3.jpg');
+	float: right;
+}
+
+.div-text-favoritos{
+	float: right;
+	width: 90%;
+}
+
+.img-delete{
+    position: absolute;
+    right: 0;
+    margin-top: -15px;
 }
 
