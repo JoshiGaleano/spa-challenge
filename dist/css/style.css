@@ -362,4 +362,6 @@ if it's not present, don't show loader */
 	    float: left;
 	    margin-left: 10%;
 	}
+
+	#search-character { width: 200px; }
 }
