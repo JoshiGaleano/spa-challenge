@@ -31,6 +31,9 @@ p{
 	color: #7D7675;
 	line-height: 1.42857143;
 	font-size: 15px;
+	letter-spacing: 0.2px;
+    padding-right: 5px;
+    font-weight: 200;
 }
 
 /****** Estilos generales ******/
@@ -47,6 +50,8 @@ p{
 .padding-right-15{ padding-right: 15px; }
 
 .m-bottom{ margin-bottom: 5%; }
+
+.m-bottom-20{ margin-bottom: 20px; }
 
 .m-bottom-40{ margin-bottom: 40px; }
 
@@ -114,7 +119,7 @@ p{
     width: 100%; 
 }
 
-.btn-info {
+.btn-info2 {
     width: 50%;
     border-radius: 0;
     height: 70px;
@@ -126,6 +131,31 @@ p{
 .modal-content{ border-radius: 0; }
 
 .ui-menu .ui-menu-item { line-height: 1.42857143; }
+
+.pagination>li>a, .pagination>li>span, .pagination>li>a:hover {
+    color: #C3C1C3;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px #ddd;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    color: #C3C1C3;
+    background-color: #FBFCFD;
+    border-color: #FBFCFD;
+}
+
+.pagination-lg>li:first-child>a, .pagination-lg>li:first-child>span {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: #C3C1C3;
+}
+
+.pagination-lg>li:last-child>a, .pagination-lg>li:last-child>span {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #C3C1C3;
+}
 /*************************************************/
 
 #search-character{
@@ -134,11 +164,24 @@ p{
 	line-height: 1.42857143;
 }
 
+/*********** Estilos del modal **************/
 .btn-favourites { 
 	background-color: #EFF0F1; 
 	color: #3B3433;
 	border-color: #EFF0F1;
 	font-weight: bold;
+}
+
+.btn-favourites:hover {
+    background-color: #EFF0F1;
+    color: #3B3433;
+    border-color: #EFF0F1;
+}
+
+.btn-favourites:active {
+    background-color: #302928;
+    color: #E8222D;
+    border-color: #302928;
 }
 
 .btn-buy{
@@ -148,6 +191,45 @@ p{
 	font-weight: bold;
 }
 
+.btn-buy:hover {
+    background-color: #DBDCDD;
+    color: #E8222F;
+    border-color: #DBDCDD;
+}
+
+.btn-buy:active {
+    background-color: #DBDCDD;
+    color: #E8222F;
+    border-color: #DBDCDD;
+}
+
+.detail-character{     
+	display: block;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.text-character{
+	font-size: 17px;
+	line-height: 1.42857143;
+	color: #47403F;
+}
+
+#footer-character{
+	text-align: right !important;
+	padding: 15px !important;
+}
+
+.div-img{
+	width: 100%;
+	height: 350px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('http://i.annihil.us/u/prod/marvel/i/mg/c/60/4bc5a1e84f7d3.jpg');
+}
+/********************************************/
+
+/***** Estilos de los characters y los comics en la vista del home ********/
 .div-info{ height: 160px; }
 
 /* enable absolute positioning */
@@ -203,48 +285,21 @@ p{
 	padding-left: 40px;
 	vertical-align: middle;
 	color: #FFFFFF;
+	font-weight: 300;
+    letter-spacing: 1.5px;
 }
 
 .span-comic{
 	color: #7D7675;
 	line-height: 1.42857143;
 	font-size: 15px;
+	letter-spacing: 0.2px;
+    padding-right: 5px;
+    font-weight: 200;
 }
+/**************************************************************************/
 
-/* Paste this css to your style sheet file or under head tag */
-/* This only works with JavaScript, 
-if it's not present, don't show loader */
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(../img/gifs/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-}
-
-.div-img{
-	width: 100%;
-	height: 350px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url('http://i.annihil.us/u/prod/marvel/i/mg/c/60/4bc5a1e84f7d3.jpg');
-}
-
-.text-character{
-	font-size: 17px;
-	line-height: 1.42857143;
-	color: #47403F;
-}
-
-#footer-character{
-	text-align: right !important;
-	padding: 15px !important;
-}
-
+/****** Estilos del módulo de favoritos ******/
 .div-favoritos{
 	width: 90%;
 	height: 320px;
@@ -263,5 +318,48 @@ if it's not present, don't show loader */
     position: absolute;
     right: 0;
     margin-top: -15px;
+    cursor: pointer;
+}
+/********************************************/
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/gifs/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 }
 
+@media(min-width: 768px){
+	.img-character {
+	    width: 120px;
+	    height: 120px;
+	}
+
+	.div-character { height: 400px; }
+
+	.height-60 { height: 100px; }
+
+	.div-favoritos { width: 100%; }
+
+	#search-character { width: 500px; }
+
+	.detail-character { width: 50%; }
+}
+
+@media(max-width:767px){
+	.img-delete { right: 10%; }
+
+	.div-favoritos {
+		width: 80%;
+	    float: left;
+	    margin-left: 10%;
+	}
+}

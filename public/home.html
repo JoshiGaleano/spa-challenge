@@ -39,19 +39,14 @@
 		<div class="container">
 			<section class="row">
 				<div class="row m-bottom">
-					<div class="col-md-9 padding-left-0">
-						<div class="col-md-6 padding-left-0">
+					<div class="col-xs-12 col-sm-9 col-md-9 padding-left-0">
+						<div class="col-xs-12 col-sm-6 col-md-6 padding-left-0">
 							<img src="../dist/img/icons/characters.png" class="padding-right-5">
-							<h3 class="inline-block">Characters</h3>
+							<h3 id="h3-character" class="inline-block">Characters</h3>
 						</div>
-						<div class="col-md-6 padding-right-0">
-							<select class="form-control select-order">
-								<option>Sort by</option>
-								<option>2</option>
-							</select>
-						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 padding-right-0"></div>
 					</div>
-					<div class="col-md-3">
+					<div class="hidden-xs col-xs-12 col-sm-3 col-md-3">
 						<div class="padding-left-0">
 							<img src="../dist/img/icons/favourites.png" class="padding-right-15">
 							<h3 class="inline-block">My favourites</h3>
@@ -59,33 +54,24 @@
 					</div>
 				</div>
 				<div class="row">
-					<div id="characters" class="col-md-9"></div>
-					<div class="col-md-3 m-top-20">
-						<div class="row">
-							<div class="col-md-12">
-								<img src="../dist/img/icons/btn-delete.png" class="img-delete">
-								<div class="div-favoritos"></div>
-								<div class="div-text-favoritos">
-									<h5 class="text-center m-bottom-40 color-text">Avengers: The Initiative (2007) #14</h5>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<img src="../dist/img/icons/btn-delete.png" class="img-delete">
-								<div class="div-favoritos"></div>
-								<div class="div-text-favoritos">
-									<h5 class="text-center m-bottom-40 color-text">Avengers: The Initiative (2007) #14</h5>
-								</div>
-							</div>
+					<div id="characters" class="col-xs-12 col-sm-9 col-md-9"></div>
+					<div class="visible-xs col-xs-12 col-sm-3 col-md-3 m-bottom-20">
+						<div class="padding-left-0">
+							<img src="../dist/img/icons/favourites.png" class="padding-right-15">
+							<h3 class="inline-block">My favourites</h3>
 						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3 m-top-20">
+						<div class="row" id="comic-favourites"></div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-9">
+					<div class="col-xs-12 col-sm-9 col-md-9">
 						<nav aria-label="Page navigation" class="text-center">
 							<ul class="pagination pagination-lg"></ul>
 						</nav>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-xs-12 col-sm-3 col-md-3"></div>
 				</div>
 			</section>
 		</div>
@@ -93,10 +79,10 @@
 		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 m-top-25">
+					<div class="col-xs-12 col-sm-6 col-md-6 m-top-25">
 						<span class="span-footer">Grability 2016 - Todos los derechos reservados</span>
 					</div>
-					<div class="col-md-6">
+					<div class="col-xs-12 col-sm-6 col-md-6">
 						<img src="../dist/img/grability-logo.png" class="img-footer">
 					</div>
 				</div>
@@ -116,13 +102,13 @@
 				    </div>
 				    <div class="modal-body">
 				        <div class="row">
-				        	<div class="col-md-4">
+				        	<div class="col-xs-12 col-sm-4 col-md-4">
 				        		<div class="div-img"></div>
 				        	</div>
-				        	<div class="col-md-8">
+				        	<div class="col-xs-12 col-sm-8 col-md-8">
 				        		<h3 class="title-character">Exiles Vol. 15: Enemy</h3>
 				        		<span class="text-character">A new era for Exiles begins here! Legend Chris Claremont (UNCANNY X-MEN)</span>
-				        		<a href="https://marvel.com/" class="detail-character" target="_blank">Detail character</a>
+				        		<a href="https://marvel.com/" class="btn btn-info detail-character" target="_blank">Detail character</a>
 				        	</div>
 				        </div>
 				    </div>
@@ -130,8 +116,8 @@
 				        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 				    </div>
 				    <div id="footer-comic" class="modal-footer">
-				        <button type="button" class="btn btn-info btn-favourites" data-dismiss="modal"><img src="../dist/img/icons/btn-favourites-default.png">&nbsp;&nbsp;&nbsp;ADD TO FAVOURITES</button>
-				        <button type="button" class="btn btn-info btn-buy" data-dismiss="modal"><img src="../dist/img/icons/shopping-cart-primary.png">&nbsp;&nbsp;&nbsp;BUY FOR $3.99</button>
+				        <button type="button" class="btn btn-info2 btn-favourites" data-dismiss="modal"><img src="../dist/img/icons/btn-favourites-default.png" id="img-favourites">&nbsp;&nbsp;&nbsp;ADD TO FAVOURITES</button>
+				        <button type="button" class="btn btn-info2 btn-buy" data-dismiss="modal"><img src="../dist/img/icons/shopping-cart-primary.png" disabled>&nbsp;&nbsp;&nbsp;BUY FOR $3.99</button>
 				    </div>
 			    </div>
 			</div>
